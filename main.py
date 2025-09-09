@@ -40,13 +40,13 @@ def limpiar():
     entrada.delete(0, tk.END)
     etiqueta.config(text="Escribe tu nombre:")
 
-boton_sumar = tk.Button(ventana, text="Sumar", command=sumar)
+boton_sumar = tk.Button(ventana, text="Sumar", command=sumar, background="red", fg="black")
 boton_sumar.pack(pady=5)
 
-boton_restar = tk.Button(ventana, text="Restar", command=restar)
+boton_restar = tk.Button(ventana, text="Restar", command=restar, background= "blue", fg="pink")
 boton_restar.pack(pady=5)
 
-boton_multiplicar = tk.Button(ventana, text="Multiplicar", command=multiplicar)
+boton_multiplicar = tk.Button(ventana, text="Multiplicar", command=multiplicar, background="pink")
 boton_multiplicar.pack(pady=5)
 
 boton_dividir = tk.Button(ventana, text="Dividir", command=dividir)
