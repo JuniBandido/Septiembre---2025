@@ -10,6 +10,14 @@ def sumaNumerosN(n):
     else:
         return n + sumaNumerosN(n - 1)
 
+def fibonacci(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
+
 
 while True:
     print("1. Calcular factorial de un número")
@@ -39,3 +47,6 @@ while True:
                 print("Número no válido")
             print()
 
+        case "3":
+            print()
+            n = int(input("Ingrese el número: ")
