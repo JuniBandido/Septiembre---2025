@@ -18,6 +18,21 @@ def fibonacci(n):
     else:
         return fibonacci(n - 1) + fibonacci(n - 2)
 
+def contarLetra(palabra, letra, indice=0):
+    if indice == len(palabra):
+        return 0
+    return (1 if palabra[indice] == letra else 0) + contarLetra(palabra, letra, indice + 1)
+
+
+def invertirCadena(cadena):
+    if len(cadena) == 0:
+        return ""
+    return cadena[-1] + invertirCadena(cadena[:-1])
+
+def potencia(base, exponente):
+    if exponente == 0:
+        return 1
+    return base * potencia(base,exponente - 1)
 
 while True:
     print("1. Calcular factorial de un número")
@@ -49,4 +64,36 @@ while True:
 
         case "3":
             print()
-            n = int(input("Ingrese el número: ")
+            n = int(input("Ingrese el número: "))
+            x = fibonacci(n)
+            print(f"El numero de fibonacci de {n} es {x}")
+            print()
+
+        case "4":
+            y = input("Ingrese la palabra: ")
+            z = input("Ingrese la letra: ")
+            x = contarLetra(y, z)
+            print()
+            print(f"La letra {z}, aparece {x} veces en la palabra {y}")
+            print()
+
+        case "5":
+            n = input("Ingrese la palabra a invertir: ")
+            x = invertirCadena(n)
+            print(f"La palabra {n} invertida es: {x}")
+            print()
+
+        case "6":
+            n = int(input("Ingerese la base: "))
+            y = int(input("Ingrese el exponente: "))
+            x = potencia(n, y)
+            print(f"La potencia de {n} a la {y} es: {x}")
+            print()
+
+        case "7":
+            print("Cerraste el programa!")
+            break
+
+        case _:
+            print("Opcion invalida, vuelve a intenarlo")
+            print()
